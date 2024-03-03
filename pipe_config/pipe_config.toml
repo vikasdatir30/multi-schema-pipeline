@@ -1,0 +1,5 @@
+[est_file_config]
+record_length = 2300
+field_mapper_file = "pipe_config/field_mappings_v0.xlsx"
+
+

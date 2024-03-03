@@ -1,0 +1,49 @@
+[project_path]
+project_dir = ""
+
+
+[pyspark_config]
+spark_master = "local[2]"   # Set the Spark master URL and the number of cores
+spark_app_name = "EST_Claim_Pipeline"  # Set the application name
+spark_executor_memory = "2g"  # Set the memory per executor
+spark_executor_cores = "2"   # Set the number of cores per executor
+spark_executor_instances= "4"
+spatk_jar_path = "jars"
+
+
+
+[source_file_store]
+source_dir = "source_file_store"
+file_layout_config = "pipe_config/pipe_config.toml"
+
+
+[temp_file_store]
+temp_dir = "temp_file_store"
+
+
+[error_files]
+error_dir = "error_files"
+
+[archive_files]
+archive_dir = "archive_files"
+
+
+
+[database_config]
+driver = "ODBC Driver 17 for SQL Server"
+server = ""
+port = ""
+database = ""
+username = ""
+password = ""
+
+
+[tables]
+record_batch_size = 999
+schema = "dbo"
+metadata_tbl  = "est.source_file_metadata"
+est_hdr_tbl = "est_claim_header"
+est_dtl_tbl = "est_claim_detail"
+est_tail_tbl = "est_claim_trailer"
+
+
